@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Session move and delete",
+    "description": "Adds Move to project and Delete session to the session context menu. Moving rewrites the session working directory; deleting removes the local log. Project folders and other sessions are untouched.",
+    "detail": "docs/DETAIL.md"
+  }
+}

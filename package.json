@@ -1,0 +1,62 @@
+{
+  "name": "dsh-session-move-delete",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Move a DeepSeek Harness session to another project, or delete it permanently. · 在会话右键菜单中移动会话到其他项目，或永久删除本地会话记录。",
+  "engines": {
+    "node": ">=24",
+    "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "README.md",
+    "assets/icon-512.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-remote-access",
+        "@deepseek-ai/dsh-client-ui-context-menu",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "license": "Apache-2.0",
+  "author": "wuguanggan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuguanggan/dsh-session-move-delete.git"
+  },
+  "homepage": "https://github.com/wuguanggan/dsh-session-move-delete#readme",
+  "bugs": {
+    "url": "https://github.com/wuguanggan/dsh-session-move-delete/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "session",
+    "workspace",
+    "move",
+    "delete"
+  ]
+}
